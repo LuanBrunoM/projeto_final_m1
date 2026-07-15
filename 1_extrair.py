@@ -19,10 +19,8 @@ from config import (
     TAMANHO_BLOCO,
 )
 
-# Nome das colunas de cada CSV, na ordem exata em que aparecem no arquivo
-# original (a mesma ordem usada na criacao das tabelas RAW). A lista será usada para
-# renomear as colunas do DataFrame criado lendo o arquivop CSV, evitando problemas
-# com acentuacao/espacos nos cabecalhos originais.
+# A lista é usada para montar o INSERT (nomes das colunas e quantidade de marcadores %s)
+# e para nomear as colunas na hora de criar a tabela RAW.
 COLUNAS_CSV = {
     "viagem": [
         "id_processo_viagem",
